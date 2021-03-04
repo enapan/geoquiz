@@ -1,26 +1,28 @@
 <html>
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="geoquiz.css" />
-    <title>GeoQuiz</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<script src="countries.js"></script>
+<script defer src="index.js"></script>
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<style>
+#map { height: 80%; cursor: crosshair; }
+.country-name,
+.correct { color: green; }
+.incorrect { color: red; }
+</style>
+<title>GeoQuiz</title>
 </head>
-
-<body class="start">
-    <div class="intro" onclick="window.location.href='game.html'">
-        <h1>GeoQuiz - The Game</h1>
-        <h2>Test your geography knowledge!</h2>
-        <p>Choose your challenge:</p>
-        <nav>
-            <a href="africa.html">Africa</a>
-            <a href="america.html">America</a>
-            <a href="asia.html">Asia</a>
-            <a href="europe.html">Europe</a>
-            <a href="oceania.html">Oceania</a>
-            <a href="game.html">World</a>
-        </nav>
-    </div>
+<body>
+<h3>Test your geography knowledge!<h1>
+<h4>Locate and click on <span id="target" class="country-name"></span></h2>
+<div id="map"></div>
+<div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action" type="button"></button>
+</div>
 </body>
-
 </html>
