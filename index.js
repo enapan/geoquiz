@@ -121,9 +121,9 @@ function displayCountryShape(countryName, mycolor) {
       };
       if (wrongShape) wrongShape.removeFrom(map);
       if (mycolor !== 'black') {
-        L.geoJSON(geojson).setStyle({ color: mycolor, fillColor: mycolor, weight: 1 }).addTo(map);
+        L.geoJSON(geojson).setStyle({ color: mycolor, fillColor: mycolor, weight: 1, interactive: false }).addTo(map);
       } else {
-        wrongShape = L.geoJSON(geojson).setStyle({ color: mycolor, fillColor: mycolor, weight: 1 });
+        wrongShape = L.geoJSON(geojson).setStyle({ color: mycolor, fillColor: mycolor, weight: 1, interactive: false });
         wrongShape.addTo(map);
       }
     } else {
