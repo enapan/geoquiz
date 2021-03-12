@@ -150,6 +150,7 @@ function normalizeCountryName(countryName) {
     case "Mindanao": return "Philippines";
     case "Luzon": return "Philippines";
     case "Visayas": return "Philippines";
+    case "British Sovereign Base Areas": return "Cyprus"
     default: return countryName;
   }
 }
