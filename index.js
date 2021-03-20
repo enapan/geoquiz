@@ -74,7 +74,7 @@ document.getElementById('skip').onclick = function () {
 
 function handleClick(ev) {
   const latlng = ev.latlng;
-  const queryParams = { 'accept-language': 'en', format: 'json', lat: latlng.wrap().lat, lon: latlng.wrap().lng, zoom: 3 };
+  const queryParams = { 'accept-language': 'en', format: 'json', lat: latlng.wrap().lat, lon: latlng.wrap().lng, zoom: 5 };
   getJson('https://nominatim.openstreetmap.org/reverse', queryParams).then(function (place) {
     if (place.error === "Unable to geocode") {
       popup = L.popup().setLatLng(latlng).setContent("Nothing here").openOn(map);
@@ -134,23 +134,8 @@ function displayCountryShape(countryName, mycolor) {
 
 function normalizeCountryName(countryName) {
   switch (countryName) {
-    //case "Czechia": return "Czech Republic";
-    //case "Democratic Republic of the Congo": return "Congo";
-    //case "Guam": return "United States of America";
-    case "RDPA": return "Algeria";
-    case "RSA": return "South Africa";
-    //case "Russian Federation": return "Russia";
-    //case "Sahrawi Arab Democratic Republic": return "Morocco";
-    case "SBA": return "Akrotiri and Dhekelia";
-    case "Sint Maarten": return "The Netherlands";
-    case "South Ossetia": return "Georgia";
-    //case "Territorial waters of Faroe Islands": return "Faroe Islands";
-    case "Turkish Republic Of Northern Cyprus": return "Cyprus";
-    //case "North Macedonia": return "Macedonia";
-    case "Mindanao": return "Philippines";
-    case "Luzon": return "Philippines";
-    case "Visayas": return "Philippines";
-    case "British Sovereign Base Areas": return "Cyprus"
+    case "Azad Kashmir": return "Pakistan";
+    case "Palestinian Territory": return "Palestine"
     default: return countryName;
   }
 }
